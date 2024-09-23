@@ -10,23 +10,6 @@ public class Week2Refresher {
 
     private List<Product> productist = new ArrayList<Product>();
 
-    @GetMapping("/hello")
-            public String message()
-    {
-        return "Hello";
-    }
-    @GetMapping("/hello/{name}")
-    public String myName(@PathVariable String name)
-    {
-        return "Your name is " + name;
-    }
-
-    @GetMapping("/search")
-    public String search(@RequestParam String search1, @RequestParam() String search2)
-    {
-        return search1 + " " + search2;
-    }
-
     @GetMapping
     public List <Product> getProductList()
     {
