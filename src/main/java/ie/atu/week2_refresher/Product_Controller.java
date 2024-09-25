@@ -38,6 +38,11 @@ public class Product_Controller {
                 return product_Service.updateProduct(id, product);
         }
 
+        @PostMapping("/products/{id}")
+        public Product deleteProduct(@PathVariable Long id) {
+                return product_Service.deleteProduct(id);
+        }
+
 
 
 

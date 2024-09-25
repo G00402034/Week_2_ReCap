@@ -22,10 +22,19 @@ import java.util.List;
                 if (product.getId().equals(id)) {
                     product.setName(updatedProduct.getName());
                     product.setPrice(updatedProduct.getPrice());
-                    return product; // Return the updated product
+                    return product;
                 }
             }
-            // Return null if the product is not found
+            return null;
+
+        }
+        public Product deleteProduct(Long id) {
+            for (Product product : productlist) {
+                if (product.getId().equals(id)) {
+                    productlist.remove(product);
+                    return product;
+                }
+            }
             return null;
         }
     }
