@@ -7,7 +7,7 @@ import java.util.List;
 
     @Service
     public class Product_Service {
-        private List<Product> productlist = new ArrayList<Product>();
+        private final List<Product> productlist = new ArrayList<>();
 
         public List<Product> getAllProducts() {
             return productlist;
