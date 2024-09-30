@@ -10,12 +10,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Product {
-    @Min(value = 0)
+    @Min(value = 0 , message = "Value cannot be less than 0")
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "Name cannot be blank")
     private String name;
 
-    @Min(value = 0)
+    @Min(value = 0 , message = "Value cannot be less than 0" )
     private double price;
 }
